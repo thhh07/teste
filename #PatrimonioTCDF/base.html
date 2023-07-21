@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro TCDF</title>
+  <link rel="icon" type="imagem/png" href="https://dev-ecommerce-assets-dist.direcaoconcursos.com.br/course/image/8c7a7ee5-db52-4cd2-a900-e6f68b08a4c3.jpg"/>
+</head>
+<body>
+  <!---- TH -->
+  <!---- Cadastro de patrimonio TCDF -->
+  <body>
+    
+    
+  </body>
+
+  <body>
+    
+    <!------ Foto do TCDF -->
+   <center>
+    <img src="https://blog-static.infra.grancursosonline.com.br/wp-content/uploads/2013/11/03141345/tcdf-organizador-cespe-2.jpg"
+    width="750px" > 
+   </center>
+  </body>
+  
+  <!---- estilização titulo ---->
+  <style>
+   
+    .tituloPrincipal {
+   color: black;
+   font-size: 50px;
+   }
+  
+   .barra {
+  background-color:rgb(96, 96, 228);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+ }
+  </style>
+  <br>
+  <div class="barra"></div> 
+  <center>
+  <h1 class="tituloPrincipal">Cadastro TCDF</h1>
+  <h2>Insira dados de cadastro do servidor</h2>
+  </center>
+
+
+  <!-- Dados a serem inseridos-->
+ <from>
+   <center>
+   Nome
+    <input type="text"> <br> <br>
+    CPF
+    <input type="text"> <br> <br>
+    Orgão 
+    <input type="text"> <br> <br>
+    Numero do patrimonio
+    <input type="number"> <br> <br>
+   
+    
+    <!--- Para inserir outo patrimonio vinculado ao servidor -->
+    <label for="mais_patrimonios">Será inserido mais de um patrimônio?</label>
+  <input type="radio" name="mais_patrimonios" value="sim" id="opcao-sim" required>
+  <label for="opcao-sim">Sim</label>
+
+  <input type="radio" name="mais_patrimonios" value="nao" id="opcao-nao">
+  <label for="opcao-nao">Não</label>
+
+  <div id="outro_patrimonio" style="display: none;">
+    <label for="input-outro-patrimonio">Outro patrimônio:</label>
+    <input type="text" id="input-outro-patrimonio">
+  </div>
+
+  <script>
+    var opcaoSim = document.getElementById("opcao-sim");
+    var outroPatrimonio = document.getElementById("outro_patrimonio");
+
+    opcaoSim.addEventListener("click", function() {
+      outroPatrimonio.style.display = "block";
+    });
+
+    opcaoNao.addEventListener("click", function() {
+      outroPatrimonio.style.display = "none";
+    });
+  </script>
+           
+            <br> <br>
+   
+  
+  
+<!-- Botão de evio de DOC (sem função ainda)-->
+   <button>
+      Envio de documentos
+   </button>
+  
+<!-- Aguarde Verificação -->
+  </from>
+  <label></label>   
+  <p style="color: red";>Aguarde verificação.</p>
+   </center>
+
+
+  
+<!---- inicio rodapé -->
+  <style>
+    html, body {
+    min-height: 100%;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+        
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(96, 96, 228);
+    color: #FFF;
+    width: 100%;
+    height: 50px;    
+    text-align: center;
+    line-height: 50px;
+}
+  </style>
+   <footer>
+   Versão do Sistema 1.36
+  </footer>
+<!---- final rodapé -->
+
+ 
+
+
+
+</body>
+</html>
