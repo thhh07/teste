@@ -1,0 +1,13 @@
+.tituloPrincipal {
+    color: black;
+    font-size: 50px;
+}
+   
+.barra {
+   background-color:rgb(96, 96, 228);
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 20px;
+}

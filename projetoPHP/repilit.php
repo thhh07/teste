@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <form action="welcome.php" method="post">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro TCDFRP</title>
   <link rel="icon" type="imagem/png" href="https://dev-ecommerce-assets-dist.direcaoconcursos.com.br/course/image/8c7a7ee5-db52-4cd2-a900-e6f68b08a4c3.jpg"/>
+  <link rel="stylesheet" href="php.css">
 <!-- TH -->
    <body>
     
@@ -18,23 +20,7 @@
 </head>
 <body>
   <!---- estilização titulo ---->
-  <style>
-   
-    .tituloPrincipal {
-   color: black;
-   font-size: 50px;
-   }
-  
-   .barra {
-  background-color:rgb(96, 96, 228);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 20px;
- }
-  </style>
-  <br>
+  -<br>
   <div class="barra"></div> 
   <center>
   <h1 class="tituloPrincipal">Cadastro TCDF</h1>
@@ -50,9 +36,11 @@
      
      Orgão: andar, responsavel
      */
+    
     // Verifica se o formulário foi enviado
        // Banco de Dados detalhado para TCDF
-     /*class funcionario
+     /*
+     class funcionario
      public $IdFuncionario;
      public $CPF;
      public $Nome;
@@ -88,17 +76,18 @@
       public $IdGestao 
       public $Codigo 
       public $Tipo 
-*/
+      */
+
+
     // Verifica se o formulário foi enviado
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Recupera os valores dos campos do formulário
+     if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $patrimonio = $_POST['patrimonio'];
         $mais_patrimonios = $_POST['mais_patrimonios'];
         $nome_servidor = $_POST['nome_servidor'];
         $orgao_servidor = $_POST['orgao_servidor'];
         $CPF_servidor = $_POST['CPF-servidor'];
-      
-        
+        }
+         
       
 
         // Processa os dados, por exemplo, salvar no banco de dados
@@ -108,7 +97,7 @@
         echo "<p>Mais de um patrimônio: $mais_patrimonios</p>";
         echo "<p>Nome do servidor: $nome_servidor</p>";
         echo "<p>Órgão do servidor: $orgao_servidor</p>";
-    } else {
+     else {
         // Se o formulário não foi enviado, exibe o formulário de cadastro
         ?> <!--- FIM PHP FIM PHP FIM PHP --------->
 
@@ -173,12 +162,10 @@
     }
     ?>
 
-</body>
-</html>
-<html>
-  <head>
-    <title>PHP Test</title>
-  </head>
+ </body>
+
+
+  
   <body>
     <?php echo '<p>Cadastro efetuado com susesso</p>'; ?> 
     <br> <br>
