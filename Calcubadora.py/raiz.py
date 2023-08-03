@@ -1,12 +1,10 @@
-import math
+def calcular_probabilidade(resultados_favoraveis, resultados_possiveis):
+    probabilidade = resultados_favoraveis / resultados_possiveis
+    return probabilidade
 
-def calcular_raiz_quadrada(numero):
-    if numero < 0:
-        return "Erro: Não é possível calcular a raiz quadrada de um número negativo."
-    else:
-        return math.sqrt(numero)
+resultados_favoraveis = int(input("Digite o número de resultados favoráveis: "))
+resultados_possiveis = int(input("Digite o número total de resultados possíveis: "))
 
-# Exemplo de uso:
-numero = float(input("Digite um número: "))
-resultado = calcular_raiz_quadrada(numero)
-print("A raiz quadrada de", numero, "é", resultado)
+probabilidade = calcular_probabilidade(resultados_favoraveis, resultados_possiveis)
+
+print("A probabilidade do evento é:", probabilidade)
